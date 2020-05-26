@@ -29,12 +29,13 @@ export default function Layout({
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       <header className={styles.header}>
         {home ? (
           <>
             <img
-              src="/images/kult-magazine.svg"
+              src="/img/kult-magazine.svg"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
@@ -45,7 +46,7 @@ export default function Layout({
             <Link href="/">
               <a>
                 <img
-                  src="/images/kult-magazine.svg"
+                  src="/img/kult-magazine.svg"
                   className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                   alt={name}
                 />
