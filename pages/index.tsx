@@ -7,11 +7,6 @@ import Link from 'next/link'
 import Date from '../components/date'
 import { GetStaticProps } from 'next'
 
-declare global {
-  interface Window { netlifyIdentity: any; }
-}
-window.netlifyIdentity = window.netlifyIdentity || {};
-
 export default function Home({
   allPostsData
 }: {
@@ -21,18 +16,6 @@ export default function Home({
     id: string
   }[]
 }) {
-  useEffect(()=>{
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  },[])
-
   return (
     <Layout home>
       <Head>
