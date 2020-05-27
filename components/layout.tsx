@@ -35,7 +35,7 @@ export default function Layout({
         {home ? (
           <>
             <img
-              src="/img/kult-magazine.svg"
+              src="/images/kult-magazine.svg"
               className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
               alt={name}
             />
@@ -46,7 +46,7 @@ export default function Layout({
             <Link href="/">
               <a>
                 <img
-                  src="/img/kult-magazine.svg"
+                  src="/images/kult-magazine.svg"
                   className={`${styles.headerImage} ${utilStyles.borderCircle}`}
                   alt={name}
                 />
